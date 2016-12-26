@@ -11,6 +11,8 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+	//添加语言包
+	//'language'=>'zh-CN',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -44,6 +46,31 @@ return [
             ],
         ],
         */
+    	//添加语言包
+//     		'i18n' => [
+//     				'translations' => [
+//     						'common' => [
+//     								'class' => 'yii\i18n\PhpMessageSource',
+//     								//'basePath' => '/messages',
+//     								'fileMap' => [
+//     										'common' => 'common.php',
+//     								],
+//     						],
+//     						'power' => [
+//     								'class' => 'yii\i18n\PhpMessageSource',
+//     								//'basePath' => '/messages',
+//     								'fileMap' => [
+//     										'power' => 'power.php',
+//     								],
+//     						],
+//     				],
+//     		],
+    		'urlManager' => [
+    				'enablePrettyUrl' => true,
+    				'showScriptName' => false,
+    				'rules'=>[
+    				],
+    		],
     ],
     'params' => $params,
 ];
